@@ -16,6 +16,7 @@
 	</parent>
 
 	<modules>
+		<module>util</module>
 		<module>bom</module>
 		<module>couchbase</module>
 		<module>elasticsearch</module>
