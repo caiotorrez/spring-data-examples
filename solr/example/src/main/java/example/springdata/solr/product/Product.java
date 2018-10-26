@@ -38,12 +38,16 @@ import org.springframework.data.solr.repository.Score;
 @SolrDocument(collection = "techproducts")
 public class Product {
 
+	// debugging: testing the constructor does not change
+	static {Product p = new Product("id", "name", null, null, null,true, null, null);
+	}
+
 	private @Id String id;
 	private @Indexed String name;
 	private @Indexed(name = "cat") List<String> category;
 	private @Indexed(name = "store") Point location;
 	private @Indexed String description;
-	private @Indexed boolean inStock;
+	private @Indexed Boolean inStock;
 	private @Indexed Integer popularity;
 	private @Score Float score;
 }
